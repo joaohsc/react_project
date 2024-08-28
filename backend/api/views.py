@@ -6,7 +6,7 @@ from .serializers import UserSerializer, NoteSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny
 
 class NoteListCreate(generics.ListCreateAPIView):
-    serializer_class = UserSerializer
+    serializer_class = NoteSerializer
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
